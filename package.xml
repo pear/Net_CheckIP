@@ -22,7 +22,7 @@ This is the first stable release.
     </notes>
     <filelist>
       <dir name="/" baseinstalldir="Net">
-        <file role="php">CheckIP.php</file>
+        <file role="php" name="CheckIP.php" />
       </dir>
     </filelist>
   </release>
