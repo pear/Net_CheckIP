@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "../package.dtd">
 <!-- do not use the "Type" attribute here, that one is only for
      generated package.xml files -->
-<package>
+<package version="1.0">
   <name>Net_CheckIP</name>
   <summary>Check the syntax of IPv4 adresses</summary>
-  <maintainer>
-    <user>MJ</user>
-    <name>Martin Jansen</name>
-    <email>mj@php.net</email>
-  </maintainer>
+  <maintainers>
+    <maintainer>
+      <user>mj</user>
+      <name>Martin Jansen</name>
+      <email>mj@php.net</email>
+    </maintainer>
+  </maintainers>
   <release>
     <version>1.0</version>
     <date>2001-05-24</date>
@@ -16,9 +19,10 @@
     <notes>
 
     </notes>
+    <filelist>
+      <dir name="/" baseinstalldir="Net">
+	<file role="php">CheckIP.php</file>
+      </dir>
+    </filelist>
   </release>
-  <filelist>
-    <dir>/</dir>
-    <file>CheckIP.php</file>
-  </filelist>
 </package>
