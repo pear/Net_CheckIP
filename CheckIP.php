@@ -24,7 +24,7 @@
 *
 * Usage:
 *   <?php
-*   require_once "Net_CheckIP/CheckIP.php";
+*   require_once "Net/CheckIP.php";
 *     
 *   if (Net_CheckIP::check_ip("your_ip_goes_here")) {
 *       // Syntax of the IP is ok
@@ -34,7 +34,7 @@
 * @author  Martin Jansen <mj@php.net>
 * @author  Guido Haeger <gh-lists@ecora.de>
 * @package Net_CheckIP
-* @version 1.0
+* @version 1.1
 * @access  public
 */
 class Net_CheckIP
@@ -43,9 +43,9 @@ class Net_CheckIP
     /**
     * Validate the syntax of the given IP adress
     *
-    * This function splits the IP adress in 4 pieces
+    * This function splits the IP address in 4 pieces
     * (separated by ".") and checks for each piece
-    * if it's and integer value between 0 and 255.
+    * if it's an integer value between 0 and 255.
     * If all 4 parameters pass this test, the function
     * returns true.
     *
@@ -54,23 +54,22 @@ class Net_CheckIP
     */
     function check_ip($ip)
     {
+        $oct = explode('.', $ip);
+        if (count($oct) != 4) {
+            return false;
+        }
 
-        $count = 0;
+        for ($i = 0; $i < 4; $i++) {
+            if (!is_numeric($oct[$i])) {
+                return false;
+            }
 
-        $x = explode(".", $ip);
-        $max = count($x);
-
-        for ($i = 0; $i < $max; $i++) {
-            if ($x[$i] >= 0 && $x[$i] <= 255 && preg_match("/^\d{1,3}$/", $x[$i])) {
-                $count++;
+            if ($oct[$i] < 0 || $oct[$i] > 255) {
+                return false;
             }
         }
 
-        if ($count == 4 && $max == 4) {
-            return true;
-        } else {
-            return false;
-        }       
+        return true;
     }
 }
 ?>
