@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- do not use the "Type" attribute here, that one is only for
+     generated package.xml files -->
+<Package>
+  <Name>CheckIP</Name>
+  <Summary>Check the syntax of IPv4 adresses</Summary>
+  <Maintainer>
+    <Initials>MJ</Initials>
+    <Name>Martin Jansen</Name>
+    <Email>mj@php.net</Email>
+  </Maintainer>
+  <Release>
+    <Version>1.0</Version>
+    <Date>2001-05-24</Date>
+    <Notes>
+
+    </Notes>
+  </Release>
+  <FileList>
+    <Dir>/</Dir>
+    <File>CheckIP.php</File>
+  </FileList>
+</Package>
