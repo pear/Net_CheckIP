@@ -4,7 +4,9 @@
      generated package.xml files -->
 <package version="1.0">
   <name>Net_CheckIP</name>
-  <summary>Check the syntax of IPv4 adresses</summary>
+  <summary>Check the syntax of IPv4 addresses</summary>
+  <license>PHP License</license>
+  <description>This package validates IPv4 addresses.</description>
   <maintainers>
     <maintainer>
       <user>mj</user>
@@ -14,11 +16,11 @@
     </maintainer>
   </maintainers>
   <release>
-    <version>1.0</version>
-    <date>2002-04-07</date>
+    <version>1.1</version>
+    <date>2002-08-17</date>
     <state>stable</state>
     <notes>
-This is the first stable release.
+Remove dependency for regular expressions.
     </notes>
     <filelist>
       <dir name="/" baseinstalldir="Net">
