@@ -17,18 +17,18 @@
 // |          Guido Haeger <gh-lists@ecora.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id:
+// $Id$
 
 /**
 * Class to validate the syntax of IPv4 adresses
 *
 * Usage:
 *   <?php
-*     require_once "Net_CheckIP/CheckIP.php";
+*   require_once "Net_CheckIP/CheckIP.php";
 *     
-*     if (Net_CheckIP::check_ip("your_ip_goes_here")) {
-*         // Syntax of the IP is ok
-*     }
+*   if (Net_CheckIP::check_ip("your_ip_goes_here")) {
+*       // Syntax of the IP is ok
+*   }
 *   ?>
 *
 * @author  Martin Jansen <mj@php.net>
@@ -49,23 +49,23 @@ class Net_CheckIP
     * If all 4 parameters pass this test, the function
     * returns true.
     *
-    * @param  string IP adress
-    * @return bool true if syntax is valid, otherwise false
+    * @param  string $ip IP adress
+    * @return bool       true if syntax is valid, otherwise false
     */
     function check_ip($ip)
     {
-		  
+
         $count = 0;
-        
+
         $x = explode(".", $ip);
         $max = count($x);
-        
+
         for ($i = 0; $i < $max; $i++) {
             if ($x[$i] >= 0 && $x[$i] <= 255 && preg_match("/^\d{1,3}$/", $x[$i])) {
                 $count++;
             }
         }
-                              
+
         if ($count == 4 && $max == 4) {
             return true;
         } else {
