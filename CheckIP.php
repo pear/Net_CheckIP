@@ -17,7 +17,7 @@
 // |          Guido Haeger <gh-lists@ecora.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id
+// $Id:
 
 /**
 * Class to validate the syntax of IPv4 adresses
