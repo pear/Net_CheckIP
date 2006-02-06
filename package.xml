@@ -5,7 +5,7 @@
 <package version="1.0">
   <name>Net_CheckIP</name>
   <summary>Check the syntax of IPv4 addresses</summary>
-  <license>PHP License</license>
+  <license>MIT License</license>
   <description>This package validates IPv4 addresses.</description>
   <maintainers>
     <maintainer>
