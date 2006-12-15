@@ -65,7 +65,7 @@ class Net_CheckIP
         }
 
         for ($i = 0; $i < 4; $i++) {
-            if (!is_numeric($oct[$i])) {
+            if (!preg_match("/^[0-9]+$/", $oct[$i])) {
                 return false;
             }
 
