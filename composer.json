@@ -8,23 +8,20 @@
     ],
     "autoload": {
         "psr-0": {
-            "Net_CheckIP": "./"
+            "Net": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/Net_CheckIP",
     "include-path": [
         "./"
     ],
-    "license": "MIT License",
+    "license": "MIT",
     "name": "pear/net_checkip",
     "support": {
         "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_CheckIP",
         "source": "https://github.com/pear/Net_CheckIP"
     },
     "type": "library",
-    "require": {
-        "pear/pear_exception": "*"
-    },
     "require-dev": {
         "phpunit/phpunit": "*"
     }
